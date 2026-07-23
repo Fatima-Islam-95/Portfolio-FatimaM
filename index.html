@@ -3,131 +3,350 @@
 <head>
 <meta charset="utf-8"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>Fatima Islam — Data Analyst Portfolio</title>
+<title>Fatima Islam, Researcher · Mathematical Modeller · Analyst · Educator</title>
+<meta name="description" content="Fatima Islam, Graduate Research Assistant at the University of New Brunswick. Mathematical modelling of population dynamics, ecological systems, and sustainable resource management, plus applied data analysis."/>
 <style>
- :root{color-scheme:light dark}
- body{--surface-1:#fcfcfb;--page:#f6f6f3;--text-primary:#0b0b0b;--text-secondary:#52514e;
-   --muted:#898781;--line:rgba(11,11,11,.10);--accent:#2a78d6;--accent-soft:#eaf1fb;--chip:#eef0ee}
- @media (prefers-color-scheme:dark){body:where(:not([data-theme='light'])){
-   --surface-1:#1a1a19;--page:#0d0d0d;--text-primary:#fff;--text-secondary:#c3c2b7;
-   --muted:#8f8d86;--line:rgba(255,255,255,.12);--accent:#3987e5;--accent-soft:#152538;--chip:#242422}}
- *{box-sizing:border-box}
- body{margin:0;background:var(--page);color:var(--text-primary);
-   font-family:system-ui,-apple-system,'Segoe UI',sans-serif;line-height:1.55}
- .wrap{max-width:1060px;margin:0 auto;padding:56px 22px 60px}
- header .eyebrow{color:var(--accent);font-weight:600;font-size:14px;letter-spacing:.02em}
- header h1{font-size:40px;margin:6px 0 6px;letter-spacing:-.01em}
- header .role{font-size:19px;color:var(--text-secondary);margin:0 0 18px}
- header p.about{font-size:16px;max-width:70ch;color:var(--text-primary);margin:0 0 22px}
- .links{display:flex;gap:12px;flex-wrap:wrap}
- .btn{display:inline-flex;align-items:center;gap:8px;padding:9px 16px;border-radius:9px;
-   font-size:14px;font-weight:600;text-decoration:none;border:1px solid var(--line)}
- .btn.primary{background:var(--accent);color:#fff;border-color:transparent}
- .btn.ghost{background:var(--surface-1);color:var(--text-primary)}
- .section-label{margin:46px 0 4px;font-size:13px;text-transform:uppercase;letter-spacing:.08em;color:var(--muted)}
- .section-sub{margin:0 0 20px;color:var(--text-secondary);font-size:14.5px}
- .grid{display:grid;grid-template-columns:1fr 1fr;gap:18px}
- @media(max-width:720px){.grid{grid-template-columns:1fr}}
- .card{display:flex;flex-direction:column;background:var(--surface-1);border:1px solid var(--line);
-   border-radius:14px;padding:22px 22px 18px}
- .card .num{font-size:12px;font-weight:700;color:var(--accent)}
- .card h3{margin:8px 0 6px;font-size:19px;letter-spacing:-.01em}
- .card p.desc{margin:0 0 14px;font-size:14px;color:var(--text-secondary);flex:1}
- .card .stat{font-size:13px;color:var(--text-primary);background:var(--accent-soft);
-   border-radius:8px;padding:8px 11px;margin:0 0 14px;font-weight:500}
- .chips{display:flex;gap:7px;flex-wrap:wrap;margin-bottom:14px}
- .chip{font-size:11.5px;color:var(--text-secondary);background:var(--chip);border-radius:20px;padding:3px 10px}
- .cardlinks{display:flex;gap:16px;flex-wrap:wrap;align-items:center;padding-top:12px;border-top:1px solid var(--line)}
- .cardlinks a{font-size:13.5px;font-weight:600;text-decoration:none;color:var(--accent)}
- .cardlinks a.sec{color:var(--text-secondary);font-weight:500}
- .cardlinks a:hover{text-decoration:underline}
- footer{margin-top:50px;padding-top:22px;border-top:1px solid var(--line);
-   font-size:13px;color:var(--muted);display:flex;justify-content:space-between;flex-wrap:wrap;gap:8px}
- footer a{color:var(--accent)}
+  :root{
+    --navy:#0b1e3b; --navy2:#12315c; --ink:#141b26; --body:#3f4a5a; --muted:#7b8494;
+    --accent:#2a6fdb; --accent-d:#1e569f; --line:#e6e9ee; --soft:#eef3fb; --bg:#ffffff; --bg2:#f6f8fb;
+    --serif:Georgia,'Times New Roman',serif; --sans:system-ui,-apple-system,'Segoe UI',sans-serif;
+  }
+  *{box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{margin:0;font-family:var(--sans);color:var(--body);background:var(--bg);line-height:1.6}
+  h1,h2,h3,.serif{font-family:var(--serif)}
+  a{color:var(--accent);text-decoration:none} a:hover{text-decoration:underline}
+  .wrap{max-width:1080px;margin:0 auto;padding:0 22px}
+
+  nav{position:sticky;top:0;z-index:50;background:rgba(255,255,255,.92);backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
+  nav .wrap{display:flex;align-items:center;justify-content:space-between;height:58px}
+  nav .brand{font-family:var(--serif);font-weight:700;color:var(--ink);font-size:17px}
+  nav .navlinks{display:flex;gap:20px;flex-wrap:wrap}
+  nav .navlinks a{color:var(--body);font-size:14px;font-weight:500}
+  nav .navlinks a:hover{color:var(--accent);text-decoration:none}
+  @media(max-width:760px){nav .navlinks{display:none}}
+
+  .hero{background:linear-gradient(135deg,#0a1a33 0%,#0f2547 55%,#13315e 100%);color:#eaf0f8;position:relative;overflow:hidden}
+  .hero .wrap{padding:82px 22px 74px;position:relative;z-index:2}
+  .hero .loc{font-size:14px;letter-spacing:.04em;color:#9db8e0;margin-bottom:14px}
+  .hero h1{font-size:52px;line-height:1.05;margin:0 0 10px;color:#fff;letter-spacing:-.01em}
+  .hero .title{font-family:var(--serif);font-size:24px;color:#cdddf5;margin:0 0 20px}
+  .hero p.lead{font-size:17px;max-width:60ch;color:#c4d3e8;margin:0 0 28px}
+  .hero .cta{display:flex;gap:12px;flex-wrap:wrap}
+  .btn{display:inline-flex;align-items:center;gap:8px;padding:11px 20px;border-radius:9px;font-size:14.5px;font-weight:600;border:1px solid transparent;cursor:pointer}
+  .btn.p{background:var(--accent);color:#fff} .btn.p:hover{background:var(--accent-d);text-decoration:none}
+  .btn.o{background:transparent;color:#eaf0f8;border-color:#3f5f92} .btn.o:hover{background:rgba(255,255,255,.08);text-decoration:none}
+  .hero .glyph{position:absolute;right:-40px;top:50%;transform:translateY(-50%);font-size:400px;color:rgba(255,255,255,.035);font-family:var(--serif);z-index:1;user-select:none;line-height:1}
+
+  section{padding:64px 0;border-bottom:1px solid var(--line)}
+  section.alt{background:var(--bg2)}
+  .eyebrow{font-size:13px;text-transform:uppercase;letter-spacing:.1em;color:var(--accent);font-weight:700;margin:0 0 6px}
+  h2.sec{font-size:30px;color:var(--ink);margin:0 0 8px;letter-spacing:-.01em}
+  .sec-intro{font-size:16px;max-width:74ch;margin:0 0 30px;color:var(--body)}
+
+  .grid2{display:grid;grid-template-columns:1fr 1fr;gap:20px}
+  .grid3{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+  @media(max-width:820px){.grid2,.grid3{grid-template-columns:1fr}}
+
+  .card{background:var(--bg);border:1px solid var(--line);border-radius:12px;padding:20px 22px}
+  section.alt .card{background:#fff}
+  .card h3{margin:0 0 6px;font-size:18px;color:var(--ink)}
+  .card .when{font-size:13px;color:var(--muted);margin:0 0 8px;font-weight:600}
+  .card p{margin:0;font-size:14.5px}
+  .card .org{font-size:14px;color:var(--accent-d);font-weight:600;margin:0 0 6px}
+  .card .paper{display:inline-block;margin-top:12px;font-size:13.5px;font-weight:600}
+
+  .rlist{display:grid;grid-template-columns:1fr 1fr;gap:14px 30px}
+  @media(max-width:820px){.rlist{grid-template-columns:1fr}}
+  .ritem{display:flex;gap:14px}
+  .ritem .n{flex:0 0 30px;height:30px;border-radius:8px;background:var(--soft);color:var(--accent-d);font-weight:700;display:flex;align-items:center;justify-content:center;font-size:14px;margin-top:2px}
+  .ritem h4{margin:2px 0 2px;font-size:16px;color:var(--ink);font-family:var(--serif)}
+  .ritem p{margin:0;font-size:14px}
+
+  .dcard{display:flex;flex-direction:column;background:#fff;border:1px solid var(--line);border-radius:12px;padding:18px 20px}
+  .dcard .tag{font-size:11.5px;font-weight:700;color:var(--accent);text-transform:uppercase;letter-spacing:.05em}
+  .dcard h3{margin:6px 0 6px;font-size:17px;color:var(--ink)}
+  .dcard p{margin:0 0 12px;font-size:13.5px;color:var(--body);flex:1}
+  .dcard .stat{font-size:12.5px;background:var(--soft);border-radius:7px;padding:7px 10px;margin-bottom:12px;color:var(--ink)}
+  .dcard .links{display:flex;gap:14px;border-top:1px solid var(--line);padding-top:10px;font-size:13px;font-weight:600}
+  .dcard .links a.sec{color:var(--muted);font-weight:500}
+
+  .chips{display:flex;flex-wrap:wrap;gap:8px}
+  .chip{font-size:13px;background:var(--soft);color:#22456f;border:1px solid #dbe6f6;border-radius:20px;padding:5px 13px}
+  .chip.k{background:#e9f0fb}
+
+  .cols2{columns:2;column-gap:40px} .cols2 div{break-inside:avoid;padding:7px 0;border-bottom:1px solid var(--line);font-size:14.5px}
+  @media(max-width:640px){.cols2{columns:1}}
+
+  ul.clean{list-style:none;padding:0;margin:0}
+  ul.clean li{padding:6px 0 6px 20px;position:relative;font-size:14.5px}
+  ul.clean li:before{content:"▹";position:absolute;left:0;color:var(--accent)}
+
+  footer{background:var(--navy);color:#c4d3e8;padding:48px 0 40px;border:0}
+  footer h2{color:#fff;font-size:24px;margin:0 0 10px}
+  footer a{color:#9db8e0}
+  footer .row{display:flex;gap:26px;flex-wrap:wrap;margin-top:14px;font-size:15px}
+  footer .fine{margin-top:24px;font-size:12.5px;color:#6f86a8}
 </style>
 </head>
 <body>
-<div class="wrap">
-<header>
-  <div class="eyebrow">Data Analyst</div>
-  <h1>Fatima Islam</h1>
-  <p class="role">Turning public data into decisions.</p>
-  <p class="about">I analyze open datasets-census, health, prices, labour, demographics and turn them into
-  clear, honest visual stories. My focus is data literacy: finding where a headline number misleads, segmenting
-  to reveal what's really happening, and communicating the "so what" so people can act on it. Each project below
-  is an interactive dashboard built from a real, cited source — most also come with a downloadable Tableau workbook.</p>
-  <div class="links">
-    <a class="btn primary" href="mailto:fatimaislam.apm@gmail.com">✉ fatimaislam.apm@gmail.com</a>
-    <a class="btn ghost" href="https://www.linkedin.com/in/fatima-islam-6173451aa" target="_blank" rel="noopener">in · LinkedIn</a>
-    <a class="btn ghost" href="resume.html">📄 Résumé</a>
+
+<nav><div class="wrap">
+  <span class="brand">Fatima Islam</span>
+  <div class="navlinks">
+    <a href="#about">About</a><a href="#research">Research</a><a href="#projects">Projects</a>
+    <a href="#data">Data</a><a href="#experience">Experience</a><a href="#education">Education</a><a href="#contact">Contact</a>
+  </div>
+</div></nav>
+
+<header class="hero">
+  <div class="glyph">∂</div>
+  <div class="wrap">
+    <div class="loc">Fredericton, New Brunswick, Canada</div>
+    <h1>Fatima Islam</h1>
+    <div class="title">Researcher · Mathematical Modeller · Analyst · Educator</div>
+    <p class="lead">I'm a graduate researcher at the University of New Brunswick. I build mathematical models
+    for population dynamics, ecology, and sustainable fisheries, and I use the same tools to make sense of
+    open public data.</p>
+    <div class="cta">
+      <a class="btn p" href="https://www.linkedin.com/in/fatima-islam-6173451aa" target="_blank" rel="noopener">Connect on LinkedIn</a>
+      <a class="btn o" href="mailto:fatimaislam.apm@gmail.com">Email me</a>
+      <a class="btn o" href="resume.html">Résumé</a>
+      <a class="btn o" href="#data">View data projects ↓</a>
+    </div>
   </div>
 </header>
 
-<div class="section-label">Selected projects</div>
-<p class="section-sub">Six interactive dashboards. Open any one in the browser, or download its Tableau workbook (.twbx).</p>
-
-<div class="grid">
-
-  <div class="card">
-    <div class="num">01 · Health · Data literacy</div>
-    <h3>How a health statistic gets misread</h3>
-    <p class="desc">Canada's crude cancer death rate rose while the age-standardized rate fell. A case study in why age-adjustment changes the conclusion.</p>
-    <div class="stat">Crude 204→211 vs. age-standardized 178→164 per 100k (2000→2011)</div>
-    <div class="chips"><span class="chip">Statistics Canada</span><span class="chip">Standardization</span><span class="chip">Tableau</span></div>
-    <div class="cardlinks"><a href="health-crude-vs-asr.html">Open dashboard →</a><a class="sec" href="health_cancer_mortality.twbx" download>↓ .twbx</a></div>
+<section id="about">
+  <div class="wrap">
+    <p class="eyebrow">Professional Summary</p>
+    <h2 class="sec">Modelling complex systems for sustainable decisions</h2>
+    <div class="grid2" style="align-items:start;gap:34px">
+      <div>
+        <p style="margin-top:0">I'm a Graduate Research Assistant at the University of New Brunswick, where I build and
+        study mathematical models of how populations and ecosystems change over time. Most of my work uses MATLAB and R to
+        run simulations, test stability, and apply optimal control theory, all aimed at finding sustainable ways to manage
+        fishery systems.</p>
+        <p>What I enjoy most is taking a messy real-world problem and turning it into something a model can actually answer.
+        My work sits across dynamical systems, quantitative modelling, and ecological impact assessment, and I care about
+        solutions that are grounded in data and genuinely sustainable.</p>
+      </div>
+      <div>
+        <p class="eyebrow" style="color:var(--muted)">Core principles</p>
+        <div class="chips">
+          <span class="chip k">Mathematical Modeling</span>
+          <span class="chip k">Quantitative Analysis</span>
+          <span class="chip k">Stability &amp; Control</span>
+          <span class="chip k">Sustainable Management</span>
+        </div>
+        <p class="eyebrow" style="color:var(--muted);margin-top:22px">Recognition</p>
+        <ul class="clean">
+          <li>Winner, Poster Competition, 2026 CMS Summer Meeting (AARMS Award)</li>
+          <li>Study &amp; Succeed in New Brunswick, Program Graduate (April 2026)</li>
+        </ul>
+      </div>
+    </div>
   </div>
+</section>
 
-  <div class="card">
-    <div class="num">02 · Housing · Equity</div>
-    <h3>Who the housing squeeze really hits</h3>
-    <p class="desc">2021 Census proof that cost burden concentrates on recent and young renters, not renters in general.</p>
-    <div class="stat">45.0% of recent renters aged 18–24 are cost-burdened, vs 23.0% of established renters</div>
-    <div class="chips"><span class="chip">2021 Census</span><span class="chip">Segmentation</span><span class="chip">Tableau</span></div>
-    <div class="cardlinks"><a href="housing-young-renters.html">Open dashboard →</a><a href="housing-case-study.html">Case study →</a><a class="sec" href="housing_young_renters.twbx" download>↓ .twbx</a></div>
+<section id="research" class="alt">
+  <div class="wrap">
+    <p class="eyebrow">Core Research Focus</p>
+    <h2 class="sec">Ecological modelling &amp; sustainable yield</h2>
+    <p class="sec-intro">Most of my research looks at how fish populations behave across connected habitats, and what that
+    means for harvesting them sustainably. I combine simulation, stability theory, and optimal control to weigh economic
+    yield against the health of the ecosystem.</p>
+    <div class="rlist">
+      <div class="ritem"><div class="n">1</div><div><h4>Population Dynamics</h4><p>Develop and analyze complex mathematical models of population dynamics, focusing on dispersal effects on biomass in multi-patch fishery systems.</p></div></div>
+      <div class="ritem"><div class="n">2</div><div><h4>Quantitative Analysis</h4><p>Use MATLAB and R to simulate model behaviour, perform stability analysis, and identify equilibrium points that predict long-term ecological outcomes.</p></div></div>
+      <div class="ritem"><div class="n">3</div><div><h4>Optimal Control Theory</h4><p>Apply control theory to resource-management models, investigating strategies to achieve maximum sustainable profit in fishery systems.</p></div></div>
+      <div class="ritem"><div class="n">4</div><div><h4>Predictive Modeling</h4><p>Build predictive models for multi-species population dynamics, a quantitative framework for resource assessment and process development.</p></div></div>
+      <div class="ritem"><div class="n">5</div><div><h4>Optimization Analysis</h4><p>Leverage optimization to determine efficient resource-management strategies, balancing profit or yield with ecological sustainability (biomass).</p></div></div>
+      <div class="ritem"><div class="n">6</div><div><h4>Sustainable Yield Modeling</h4><p>Model Maximum Sustainable Yield (MSY) to set data-driven quotas and support sustainable harvesting processes.</p></div></div>
+      <div class="ritem"><div class="n">7</div><div><h4>System Translation</h4><p>Translate complex real-world systems into formal mathematical models to enhance evidence-based decision-making and process improvement.</p></div></div>
+    </div>
   </div>
+</section>
 
-  <div class="card">
-    <div class="num">03 · Labour · Equity</div>
-    <h3>The gender wage gap, by who you are</h3>
-    <p class="desc">The overall "88 cents" hides a wider gap for racialized and Indigenous women. An intersectional read of the pay gap.</p>
-    <div class="stat">88¢ overall, but 78¢ for racialized women and 79¢ for Indigenous women (2025)</div>
-    <div class="chips"><span class="chip">Labour Force Survey</span><span class="chip">Intersectionality</span><span class="chip">Tableau</span></div>
-    <div class="cardlinks"><a href="gender-pay-gap.html">Open dashboard →</a><a class="sec" href="gender_pay_gap.twbx" download>↓ .twbx</a></div>
+<section id="projects">
+  <div class="wrap">
+    <p class="eyebrow">Research Projects</p>
+    <h2 class="sec">Mathematical modelling in practice</h2>
+    <div class="grid3">
+      <div class="card">
+        <h3>Population Dynamics in a Chemostat: A Two-Species Modeling Approach</h3>
+        <div class="when">Two-species ODE model · April 2024</div>
+        <p>A system of non-linear ODEs (with Monod growth kinetics) for two microbial species competing for a single substrate in a continuous-flow bioreactor. Analyzes how dilution rate, substrate availability, and species interaction drive stability, coexistence, and competitive exclusion.</p>
+        <a class="paper" href="research-chemostat.pdf" target="_blank" rel="noopener">Read full paper (PDF) →</a>
+      </div>
+      <div class="card">
+        <h3>Profit Analysis due to Migration Asymmetry in a Two-Patch Fishery Model</h3>
+        <div class="when">Bioeconomic optimal control · April 2025</div>
+        <p>A spatially explicit bioeconomic model with logistic growth, constant harvesting effort, and temperature-dependent asymmetric migration γ(T). Derives conditions for a profitable equilibrium and the critical fishing effort, showing that moderate migration asymmetry can substantially raise maximum economic yield (MEY).</p>
+        <a class="paper" href="research-fishery-migration.pdf" target="_blank" rel="noopener">Read full paper (PDF) →</a>
+      </div>
+      <div class="card">
+        <h3>Patch Model of Grass Distribution in Salt Marshes</h3>
+        <div class="when">Spatial ODE model · December 2024 · with O. Grimard</div>
+        <p>A first-order non-linear ODE patch model for two salt-marsh grasses (<em>Spartina alterniflora</em> and <em>S. patens</em>) across a discretized stress gradient, incorporating intra- and inter-specific competition and species-specific stress resistance. Establishes equilibria and examines zonation and stability.</p>
+        <a class="paper" href="research-salt-marsh.pdf" target="_blank" rel="noopener">Read full paper (PDF) →</a>
+      </div>
+    </div>
+    <p class="eyebrow" style="color:var(--muted);margin-top:26px">Selected seminars</p>
+    <div class="chips">
+      <span class="chip">Global Stability Analysis by Lyapunov Functions</span>
+      <span class="chip">Optimal Control Theory and Analysis</span>
+      <span class="chip">Stability Analysis in Ecological Models</span>
+      <span class="chip">Total Biomass Analysis of a Two-Patch Fishery Model</span>
+    </div>
   </div>
+</section>
 
-  <div class="card">
-    <div class="num">04 · Method · Statistics</div>
-    <h3>Simpson's paradox: when the average lies</h3>
-    <p class="desc">Berkeley's 1973 admissions looked biased against women until you split by department, and it reversed. The classic lurking variable case.</p>
-    <div class="stat">44% of men vs 30% of women admitted, yet women fared equal/better in 4 of 6 departments</div>
-    <div class="chips"><span class="chip">Bickel et al. 1975</span><span class="chip">Confounding</span><span class="chip">Tableau</span></div>
-    <div class="cardlinks"><a href="simpsons-paradox.html">Open dashboard →</a><a class="sec" href="simpsons_paradox.twbx" download>↓ .twbx</a></div>
+<section id="data" class="alt">
+  <div class="wrap">
+    <p class="eyebrow">Data &amp; Analytics Projects</p>
+    <h2 class="sec">Turning public data into clear, honest stories</h2>
+    <p class="sec-intro">Outside of my academic work, I like pointing the same tools at everyday public data. Usually I'm
+    chasing one thing: the spot where a headline number quietly tells the wrong story. Each project below is an interactive
+    dashboard built from a cited source, and most come with a Tableau workbook you can download.</p>
+    <div class="grid3">
+      <div class="dcard"><div class="tag">Health · Data literacy</div><h3>How a health statistic gets misread</h3><p>Crude vs. age-standardized cancer mortality, why age-adjustment flips the conclusion.</p><div class="stat">Crude 204→211 vs. age-standardized 178→164 per 100k</div><div class="links"><a href="health-crude-vs-asr.html">Open →</a><a class="sec" href="health_cancer_mortality.twbx" download>.twbx</a></div></div>
+      <div class="dcard"><div class="tag">Housing · Equity</div><h3>Who the housing squeeze really hits</h3><p>2021 Census proof that cost burden concentrates on recent and young renters.</p><div class="stat">45.0% of recent renters aged 18–24 cost-burdened vs 23.0%</div><div class="links"><a href="housing-young-renters.html">Open →</a><a href="housing-case-study.html">Case study</a><a class="sec" href="housing_young_renters.twbx" download>.twbx</a></div></div>
+      <div class="dcard"><div class="tag">Labour · Equity</div><h3>The gender wage gap, by who you are</h3><p>An intersectional read: the overall gap hides a wider one for racialized and Indigenous women.</p><div class="stat">88¢ overall, but 78¢ (racialized) &amp; 79¢ (Indigenous)</div><div class="links"><a href="gender-pay-gap.html">Open →</a><a class="sec" href="gender_pay_gap.twbx" download>.twbx</a></div></div>
+      <div class="dcard"><div class="tag">Method · Statistics</div><h3>Simpson's paradox: when the average lies</h3><p>Berkeley 1973 admissions looked biased, until you split by department and it reversed.</p><div class="stat">44% men vs 30% women, yet women ≥ men in 4 of 6 depts</div><div class="links"><a href="simpsons-paradox.html">Open →</a><a class="sec" href="simpsons_paradox.twbx" download>.twbx</a></div></div>
+      <div class="dcard"><div class="tag">Prices · Time series</div><h3>What's actually driving inflation</h3><p>A 2.8% headline is a weighted blend of components moving very differently.</p><div class="stat">All-items 2.8% masks gasoline +20.5%, shelter +1.5%</div><div class="links"><a href="inflation-drivers.html">Open →</a><a class="sec" href="inflation_drivers.twbx" download>.twbx</a></div></div>
+      <div class="dcard"><div class="tag">Demographics · Composition</div><h3>The growth was immigration all along</h3><p>Canada's population fell in 2025 once one component of change reversed.</p><div class="stat">Population −0.2% in 2025 (−102,436), first modern decline</div><div class="links"><a href="population-immigration.html">Open →</a><a class="sec" href="population_immigration.twbx" download>.twbx</a></div></div>
+    </div>
   </div>
+</section>
 
-  <div class="card">
-    <div class="num">05 · Prices · Time series</div>
-    <h3>What's actually driving inflation</h3>
-    <p class="desc">A 2.8% headline is a weighted blend: gasoline up 20%, shelter up 1.5%. Why one inflation number isn't anyone's real experience.</p>
-    <div class="stat">All-items 2.8% masks gasoline +20.5% and shelter +1.5% (June 2026, YoY)</div>
-    <div class="chips"><span class="chip">StatCan CPI</span><span class="chip">Weighted averages</span><span class="chip">Tableau</span></div>
-    <div class="cardlinks"><a href="inflation-drivers.html">Open dashboard →</a><a class="sec" href="inflation_drivers.twbx" download>↓ .twbx</a></div>
+<section id="experience">
+  <div class="wrap">
+    <p class="eyebrow">Experience</p>
+    <h2 class="sec">Academic &amp; professional</h2>
+    <h3 class="serif" style="color:var(--ink);font-size:19px;margin:0 0 14px">Academic, University of New Brunswick</h3>
+    <div class="grid3">
+      <div class="card"><h3>Graduate Research Assistant</h3><div class="when">Jan 2024 – Present</div><p>Mathematical modelling for sustainable resource management and ecological outcomes.</p></div>
+      <div class="card"><h3>Graduate Teaching Assistant</h3><div class="when">Jan 2024 – Present</div><p>Instruct and mentor 50+ undergraduates per semester in foundational mathematics at the Math Learning Center; break down complex theory and give constructive, timely feedback on a high volume of assessments.</p></div>
+      <div class="card"><h3>Mathematics Tutor</h3><div class="when">Jan 2025 – Present</div><p>One-on-one sessions supporting student learning and problem-solving.</p></div>
+    </div>
+    <h3 class="serif" style="color:var(--ink);font-size:19px;margin:28px 0 14px">Applied research &amp; professional experience</h3>
+    <div class="grid3">
+      <div class="card"><h3>Research &amp; Data Analyst</h3><div class="org">GLOCAL Foundation of Canada · Remote (Volunteer)</div><div class="when">Nov 2025 – Present</div><p>Policy research on climate response, emissions targets, and biodiversity; KPI tracking, trend analysis and predictive forecasting; qualitative analysis in NVivo; translating complex data into infographics and briefing notes for non-specialist audiences.</p></div>
+      <div class="card"><h3>Customer Experience Representative</h3><div class="org">Chapters · Indigo, Fredericton</div><div class="when">Jul 2024 – Present</div><p>Public-facing service in a fast-paced environment; CRM/POS transactions and reconciliation, records accuracy, and loss-prevention protocols.</p></div>
+      <div class="card"><h3>Assistant Lecturer (Mathematics)</h3><div class="org">Prime Academic Care · Dhaka</div><div class="when">Jan 2022 – Nov 2023</div><p>Delivered and updated complex course material, translating technical concepts into clear formats; maintained audit-ready records.</p></div>
+      <div class="card"><h3>Financial Committee Member</h3><div class="org">Union of Graduate Student Workers, UNB</div><div class="when">2026</div><p>Quality-assurance reviews of financial records, verifying accuracy and investigating discrepancies with confidentiality.</p></div>
+      <div class="card"><h3>Campus Coordinator</h3><div class="org">HR Mart BD · Dhaka</div><div class="when">Aug 2020 – Jul 2023</div></div>
+      <div class="card"><h3>Social Media Marketing Intern</h3><div class="org">Glorious Bangladesh</div><div class="when">Oct 2020 – Dec 2020</div></div>
+    </div>
   </div>
+</section>
 
-  <div class="card">
-    <div class="num">06 · Demographics · Composition</div>
-    <h3>The growth was immigration all along</h3>
-    <p class="desc">Canada's population fell in 2025 after years of record growth. When one component drove the whole trend, cutting it reversed everything.</p>
-    <div class="stat">Population −0.2% in 2025 (−102,436) — first annual decline in modern records</div>
-    <div class="chips"><span class="chip">StatCan estimates</span><span class="chip">Components of change</span><span class="chip">Tableau</span></div>
-    <div class="cardlinks"><a href="population-immigration.html">Open dashboard →</a><a class="sec" href="population_immigration.twbx" download>↓ .twbx</a></div>
+<section id="education" class="alt">
+  <div class="wrap">
+    <p class="eyebrow">Education</p>
+    <h2 class="sec">Academic milestones</h2>
+    <div class="grid3">
+      <div class="card"><h3>M.S., Mathematics (Thesis)</h3><div class="org">University of New Brunswick</div><div class="when">Jan 2024 – Present</div><p style="margin-top:8px;font-size:13.5px">Thesis: <em>Population Dynamics &amp; Resource Interaction Modelling</em>, resource &amp; sustainability analysis in patch structure.</p></div>
+      <div class="card"><h3>Master's, Applied Mathematics</h3><div class="org">University of Rajshahi</div><div class="when">2020 – 2021</div></div>
+      <div class="card"><h3>B.Sc., Applied Mathematics</h3><div class="org">University of Rajshahi</div><div class="when">2015 – 2019</div></div>
+    </div>
+
+    <p class="eyebrow" style="margin-top:36px">Skills &amp; technical proficiency</p>
+    <p class="when" style="margin:0 0 6px">Programming &amp; tools</p>
+    <div class="chips" style="margin-bottom:14px">
+      <span class="chip">MATLAB</span><span class="chip">R</span><span class="chip">C / C++</span><span class="chip">Maple</span><span class="chip">Fortran</span>
+      <span class="chip">SQL</span><span class="chip">Power BI</span><span class="chip">Tableau</span><span class="chip">NVivo</span><span class="chip">Excel (Pivot Tables, Power Query)</span>
+    </div>
+    <p class="when" style="margin:0 0 6px">Quantitative methods</p>
+    <div class="chips" style="margin-bottom:14px">
+      <span class="chip">Mathematical Modelling</span><span class="chip">Optimal Control Theory</span><span class="chip">Stability Analysis (Lyapunov / Jacobian)</span>
+      <span class="chip">Sensitivity Analysis</span><span class="chip">Numerical Simulation</span><span class="chip">Optimization</span>
+      <span class="chip">Predictive Forecasting</span><span class="chip">Cost-Benefit Analysis</span><span class="chip">KPI Reporting</span><span class="chip">Financial Modelling</span>
+    </div>
+    <p class="when" style="margin:0 0 6px">Research &amp; analysis</p>
+    <div class="chips" style="margin-bottom:18px">
+      <span class="chip">Mixed-Methods Research</span><span class="chip">Qualitative Data Analysis</span><span class="chip">Data Analysis &amp; Validation</span>
+      <span class="chip">Environmental Impact Assessment</span><span class="chip">Policy Research &amp; Evaluation</span><span class="chip">Evidence-Based Decision-Making</span>
+      <span class="chip">Risk Assessment</span><span class="chip">Research Method Investigation</span><span class="chip">Data Storytelling</span>
+      <span class="chip">Health Administrative Data (CIHI: DAD, NACRS, HMDB)</span><span class="chip">ICD-10-CA / CCI</span>
+    </div>
+
+    <p class="eyebrow" style="margin-top:26px">Graduate coursework</p>
+    <div class="cols2">
+      <div>Statistical Modeling</div><div>Operations Research</div><div>Mathematical Ecology</div>
+      <div>Statistical Methods &amp; Demography</div><div>Probability Analysis</div><div>Advanced Topics in Math I (Math Bio)</div>
+      <div>Differential Equations (ODE &amp; PDE)</div><div>Optimization Theory</div><div>Qualitative Theory of Differential Equations</div>
+      <div>Numerical Methods for Differential Equations</div><div>Population Dynamics</div><div>Numerical Analysis</div>
+    </div>
   </div>
+</section>
 
-</div>
+<section id="more">
+  <div class="wrap">
+    <div class="grid2" style="gap:40px;align-items:start">
+      <div>
+        <p class="eyebrow">Certifications &amp; Development</p>
+        <h2 class="sec" style="font-size:24px">Continued learning</h2>
+        <ul class="clean">
+          <li>Clinical Administrative Databases (DAD, NACRS, HMDB) · Canadian Institute for Health Information (CIHI)</li>
+          <li>Using ICD-10-CA / CCI: What Every Analyst Needs to Know (1005E) · Canadian Institute for Health Information (CIHI)</li>
+          <li>Financial Analysis Fundamentals · Corporate Finance Institute (2026)</li>
+          <li>Financial Modelling Guidelines · Corporate Finance Institute (2026)</li>
+          <li>Excel Fundamentals: Formulas for Finance · Corporate Finance Institute (2026)</li>
+          <li>Introduction to Risk Management · New York Institute of Finance (2026)</li>
+          <li>Lean Six Sigma White Belt · Council for Six Sigma Certification (2025)</li>
+          <li>Foundations: Data, Data, Everywhere · Coursera / IBM / Google</li>
+          <li>Master of Public Policy Analysis in Six Easy Steps · Udemy</li>
+          <li>Excel Skills for Business: Essentials · Macquarie University (Coursera)</li>
+          <li>Digital Marketing · Coursera</li>
+          <li>Integration Success Program · Ignite (2025)</li>
+          <li>TCPS 2: Research Ethics Certification · Govt. of Canada</li>
+          <li>GBA Plus: Gender-Based Analysis Plus · Govt. of Canada</li>
+          <li>Understand How AI Impacts You and Your Government · Apolitical</li>
+          <li>Closing the Green Skills Gap · LinkedIn Learning</li>
+          <li>Making Connections by Managing Bias · WHMIS · Workplace Violence Prevention</li>
+        </ul>
+      </div>
+      <div>
+        <p class="eyebrow">Leadership &amp; Organizational Roles</p>
+        <h2 class="sec" style="font-size:24px">Community &amp; outreach</h2>
+        <p class="card" style="border:0;padding:0;color:var(--accent-d);font-weight:600;margin:0 0 2px">University of New Brunswick</p>
+        <ul class="clean">
+          <li>Vice President, Bangladesh Student Society (Oct 2024 – Present), arranging conferences, seminars, and cultural functions</li>
+          <li>Hosted the Canadian Kangaroo Math Competition</li>
+          <li>Hosted the 40th NB Math Competition</li>
+          <li>Hosted a Girl Guides camp for school-aged students</li>
+        </ul>
+        <p style="color:var(--accent-d);font-weight:600;margin:14px 0 2px">University of Rajshahi</p>
+        <ul class="clean">
+          <li>Cultural Programme Organiser (2015 – 2023), event design, sponsorship, mentoring junior members, hosting seminars</li>
+        </ul>
+        <p style="color:var(--accent-d);font-weight:600;margin:14px 0 2px">Community service</p>
+        <ul class="clean">
+          <li>Field Volunteer, Nature Trust of NB, land conservation &amp; field data collection</li>
+          <li>Community Volunteer, Multicultural Association of Fredericton</li>
+          <li>Young Leaders Mentorship Program, Annual Sports Day (inclusive participation)</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
 
-<footer>
-  <span>© 2026 Fatima Islam · Data Analyst</span>
-  <span><a href="mailto:fatimaislam.apm@gmail.com">Email</a> · <a href="https://www.linkedin.com/in/fatima-islam-6173451aa" target="_blank" rel="noopener">LinkedIn</a> · <a href="resume.html">Résumé</a></span>
+<footer id="contact">
+  <div class="wrap">
+    <h2>Let's connect</h2>
+    <p style="max-width:60ch;margin:0">Open to research collaborations, data-analysis work, and teaching opportunities in
+    mathematical modelling, ecology, and applied analytics.</p>
+    <div class="row">
+      <a href="mailto:fatimaislam.apm@gmail.com">✉ fatimaislam.apm@gmail.com</a>
+      <a href="https://www.linkedin.com/in/fatima-islam-6173451aa" target="_blank" rel="noopener">in · LinkedIn</a>
+      <a href="resume.html">📄 Résumé</a>
+      <span>📍 Fredericton, New Brunswick, Canada</span>
+    </div>
+    <p class="fine">© 2026 Fatima Islam · Researcher · Mathematical Modeller · Analyst · Educator</p>
+  </div>
 </footer>
-</div>
+
 </body>
 </html>
