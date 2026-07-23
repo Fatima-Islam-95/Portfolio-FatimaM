@@ -1,0 +1,45 @@
+<!DOCTYPE html><html lang='en'><head><meta charset='utf-8'/>
+<meta name='viewport' content='width=device-width, initial-scale=1'/><title>Canada's population fell in 2025</title>
+<style>
+ :root{color-scheme:light dark}
+ .viz-root{--surface-1:#fcfcfb;--page:#f9f9f7;--text-primary:#0b0b0b;--text-secondary:#52514e;
+   --muted:#898781;--grid:#e1e0d9;--series-1:#2a78d6;--good:#0ca30c;--crit:#d03b3b;--neutral:#898781}
+ @media (prefers-color-scheme:dark){:root:where(:not([data-theme='light'])) .viz-root{
+   --surface-1:#1a1a19;--page:#0d0d0d;--text-primary:#fff;--text-secondary:#c3c2b7;
+   --muted:#8f8d86;--grid:#2c2c2a;--series-1:#3987e5;--good:#0ca30c;--crit:#e66767;--neutral:#a5a39a}}
+ *{box-sizing:border-box} body{margin:0;background:var(--page);color:var(--text-primary);
+   font-family:system-ui,-apple-system,'Segoe UI',sans-serif;line-height:1.55}
+ .viz-root{max-width:1120px;margin:0 auto;padding:26px 22px 44px}
+ .back{font-size:13px;color:var(--series-1);text-decoration:none}
+ h1{font-size:22px;margin:10px 0 4px} p.sub{margin:0;color:var(--text-secondary);font-size:14px;max-width:82ch}
+ .kpis{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:14px;margin:22px 0}
+ .kpi{background:var(--surface-1);border:1px solid rgba(11,11,11,.10);border-radius:12px;padding:14px 16px}
+ .kpi .n{font-size:24px;font-weight:700} .kpi .l{font-size:12.5px;color:var(--text-secondary);margin-top:2px}
+ .grid-wrap{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+ .card{background:var(--surface-1);border:1px solid rgba(11,11,11,.10);border-radius:12px;padding:16px 18px}
+ .card.span2{grid-column:1/-1}
+ .card h2{font-size:15px;margin:0 0 2px} .card p.note{font-size:12.5px;color:var(--text-secondary);margin:0 0 10px}
+ .grid{stroke:var(--grid);stroke-width:1} .zero{stroke:var(--baseline,#c3c2b7);stroke-width:1.3}
+ .xlab,.vlab{fill:var(--muted);font-family:system-ui} .xlab{font-size:11px;fill:var(--text-secondary)}
+ .vlab{font-size:11px;fill:var(--text-primary);font-weight:600}
+ .takeaway{margin-top:20px;background:var(--surface-1);border:1px solid rgba(11,11,11,.10);
+   border-left:4px solid var(--series-1);border-radius:10px;padding:14px 18px;font-size:14px}
+ footer{margin-top:16px;font-size:12px;color:var(--muted)} a{color:var(--series-1)}
+</style></head><body><div class='viz-root'>
+<a class='back' href='../index.html'>&larr; Back to portfolio</a>
+<h1>The growth was immigration all along: Canada's population fell in 2025</h1>
+<p class='sub'>For years Canada's population climbed fast — almost entirely on international migration, not births. When immigration policy tightened in 2025 (non-permanent resident permits cut) and natural increase slipped below zero, the total population actually <strong>declined</strong> — the first annual drop in modern records. A case study in how a headline metric driven by one input reverses when that input changes.</p>
+<div class='kpis'><div class='kpi'><div class='n' style='color:var(--crit)'>41.47M</div><div class='l'>population, Jan 1 2026</div></div><div class='kpi'><div class='n' style='color:var(--crit)'>−0.2%</div><div class='l'>population change in 2025 (−102,436) — a reversal from record growth</div></div><div class='kpi'><div class='n' style='color:var(--crit)'>−781</div><div class='l'>natural increase, Q4 2025: deaths outnumbered births</div></div><div class='kpi'><div class='n' style='color:var(--crit)'>−171,296</div><div class='l'>non-permanent residents in Q4 2025 as permits were cut</div></div></div>
+<div class='grid-wrap'>
+  <div class='card'><h2>1 &nbsp;Fourth-quarter population change, by year</h2>
+    <p class='note'>Net change in population during Q4 (Oct 1 → Jan 1). Green = growth, red = decline.</p>
+    <svg viewBox='0 0 540 250' width='100%' role='img'><line x1='52' y1='222.0' x2='528' y2='222.0' class='grid'/><text x='47' y='225.0' class='xlab' text-anchor='end' style="font-size:9px">-200k</text><line x1='52' y1='180.4' x2='528' y2='180.4' class='grid'/><text x='47' y='183.4' class='xlab' text-anchor='end' style="font-size:9px">-100k</text><line x1='52' y1='138.8' x2='528' y2='138.8' class='grid'/><text x='47' y='141.8' class='xlab' text-anchor='end' style="font-size:9px">0k</text><line x1='52' y1='97.2' x2='528' y2='97.2' class='grid'/><text x='47' y='100.2' class='xlab' text-anchor='end' style="font-size:9px">100k</text><line x1='52' y1='55.6' x2='528' y2='55.6' class='grid'/><text x='47' y='58.6' class='xlab' text-anchor='end' style="font-size:9px">200k</text><line x1='52' y1='14.0' x2='528' y2='14.0' class='grid'/><text x='47' y='17.0' class='xlab' text-anchor='end' style="font-size:9px">300k</text><line x1='52' y1='138.8' x2='528' y2='138.8' class='zero'/><rect x='96.3' y='32.0' width='70.0' height='106.8' rx='3' fill='var(--good)'><title>2023: +256,804</title></rect><text x='131.3' y='26.0' class='vlab' text-anchor='middle'>+256,804</text><text x='131.3' y='241' class='xlab' text-anchor='middle'>2023</text><rect x='255.0' y='105.4' width='70.0' height='33.4' rx='3' fill='var(--good)'><title>2024: +80,385</title></rect><text x='290.0' y='99.4' class='vlab' text-anchor='middle'>+80,385</text><text x='290.0' y='241' class='xlab' text-anchor='middle'>2024</text><rect x='413.7' y='138.8' width='70.0' height='43.1' rx='3' fill='var(--crit)'><title>2025: -103,504</title></rect><text x='448.7' y='196.9' class='vlab' text-anchor='middle'>-103,504</text><text x='448.7' y='241' class='xlab' text-anchor='middle'>2025</text></svg></div>
+  <div class='card'><h2>2 &nbsp;2025 turned mid-year</h2>
+    <p class='note'>The first half still grew; the second half more than erased it.</p>
+    <svg viewBox='0 0 420 250' width='100%' role='img'><line x1='52' y1='222.0' x2='408' y2='222.0' class='grid'/><text x='47' y='225.0' class='xlab' text-anchor='end' style="font-size:9px">-200k</text><line x1='52' y1='180.4' x2='408' y2='180.4' class='grid'/><text x='47' y='183.4' class='xlab' text-anchor='end' style="font-size:9px">-100k</text><line x1='52' y1='138.8' x2='408' y2='138.8' class='grid'/><text x='47' y='141.8' class='xlab' text-anchor='end' style="font-size:9px">0k</text><line x1='52' y1='97.2' x2='408' y2='97.2' class='grid'/><text x='47' y='100.2' class='xlab' text-anchor='end' style="font-size:9px">100k</text><line x1='52' y1='55.6' x2='408' y2='55.6' class='grid'/><text x='47' y='58.6' class='xlab' text-anchor='end' style="font-size:9px">200k</text><line x1='52' y1='14.0' x2='408' y2='14.0' class='grid'/><text x='47' y='17.0' class='xlab' text-anchor='end' style="font-size:9px">300k</text><line x1='52' y1='138.8' x2='408' y2='138.8' class='zero'/><rect x='106.0' y='106.7' width='70.0' height='32.1' rx='3' fill='var(--good)'><title>H1 2025: +77,136</title></rect><text x='141.0' y='100.7' class='vlab' text-anchor='middle'>+77,136</text><text x='141.0' y='241' class='xlab' text-anchor='middle'>H1 2025</text><rect x='284.0' y='138.8' width='70.0' height='74.7' rx='3' fill='var(--crit)'><title>H2 2025: -179,572</title></rect><text x='319.0' y='228.5' class='vlab' text-anchor='middle'>-179,572</text><text x='319.0' y='241' class='xlab' text-anchor='middle'>H2 2025</text></svg></div>
+  <div class='card span2'><h2>3 &nbsp;Why it reversed</h2>
+    <p class='note' style='font-size:13.5px;line-height:1.6'>Two things fell together. <strong>Natural increase</strong> (births minus deaths) turned <strong>negative (−781 in Q4 2025)</strong> — an aging population now has more deaths than births, so it adds nothing to growth. That left <strong>international migration</strong> as effectively the only source of growth. So when the government cut non-permanent resident permits — <strong>−171,296 non-permanent residents in Q4 2025</strong>, and permanent admissions down 19.6% year-over-year — the one engine of growth went into reverse and the population shrank. The lesson: when a total depends on a single component, the total <em>is</em> that component.</p></div>
+</div>
+<div class='takeaway'><strong>Takeaway:</strong> A number's trend can flip entirely on one input. Canada's population "growth" had quietly become a synonym for immigration; watching the aggregate hid that fragility. When a metric rides on one driver, track the driver — not the headline.</div>
+<footer>Source: Statistics Canada, <a href='https://www150.statcan.gc.ca/n1/daily-quotidien/260318/dq260318b-eng.htm'>Canada's population estimates, fourth quarter 2025</a> (The Daily). Q4 net change 2023/2024/2025 and 2025 half-year figures as reported.</footer>
+</div></body></html>

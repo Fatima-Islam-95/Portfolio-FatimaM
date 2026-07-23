@@ -1,0 +1,21 @@
+panel,category,series,value,unit,source_type
+1. Overall admit rate,All applicants,Men,44.5,%,Official
+1. Overall admit rate,All applicants,Women,30.4,%,Official
+2. Admit rate by department,Dept A,Men,62,%,Official
+2. Admit rate by department,Dept A,Women,82,%,Official
+2. Admit rate by department,Dept B,Men,63,%,Official
+2. Admit rate by department,Dept B,Women,68,%,Official
+2. Admit rate by department,Dept C,Men,37,%,Official
+2. Admit rate by department,Dept C,Women,34,%,Official
+2. Admit rate by department,Dept D,Men,33,%,Official
+2. Admit rate by department,Dept D,Women,35,%,Official
+2. Admit rate by department,Dept E,Men,28,%,Official
+2. Admit rate by department,Dept E,Women,24,%,Official
+2. Admit rate by department,Dept F,Men,6,%,Official
+2. Admit rate by department,Dept F,Women,7,%,Official
+3. Share of applicants who are women,Dept A,% women,12,%,Official
+3. Share of applicants who are women,Dept B,% women,4,%,Official
+3. Share of applicants who are women,Dept C,% women,65,%,Official
+3. Share of applicants who are women,Dept D,% women,47,%,Official
+3. Share of applicants who are women,Dept E,% women,67,%,Official
+3. Share of applicants who are women,Dept F,% women,48,%,Official

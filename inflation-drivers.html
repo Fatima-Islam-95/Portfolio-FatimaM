@@ -1,0 +1,51 @@
+<!DOCTYPE html><html lang='en'><head><meta charset='utf-8'/>
+<meta name='viewport' content='width=device-width, initial-scale=1'/><title>What's driving inflation — Canada</title>
+<style>
+ :root{color-scheme:light dark}
+ .viz-root{--surface-1:#fcfcfb;--page:#f9f9f7;--text-primary:#0b0b0b;--text-secondary:#52514e;
+   --muted:#898781;--grid:#e1e0d9;--series-1:#2a78d6;--series-2:#eb6834;--series-3:#1baf7a;
+   --neutral:#898781;--crit:#d03b3b;--good:#006300}
+ @media (prefers-color-scheme:dark){:root:where(:not([data-theme='light'])) .viz-root{
+   --surface-1:#1a1a19;--page:#0d0d0d;--text-primary:#fff;--text-secondary:#c3c2b7;
+   --muted:#898781;--grid:#2c2c2a;--series-1:#3987e5;--series-2:#d95926;--series-3:#199e70;
+   --neutral:#a5a39a;--crit:#e66767;--good:#0ca30c}}
+ *{box-sizing:border-box} body{margin:0;background:var(--page);color:var(--text-primary);
+   font-family:system-ui,-apple-system,'Segoe UI',sans-serif;line-height:1.5}
+ .viz-root{max-width:1120px;margin:0 auto;padding:26px 22px 44px}
+ .back{font-size:13px;color:var(--series-1);text-decoration:none} .back:hover{text-decoration:underline}
+ h1{font-size:22px;margin:10px 0 4px} p.sub{margin:0;color:var(--text-secondary);font-size:14px;max-width:82ch}
+ .kpis{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:14px;margin:22px 0}
+ .kpi{background:var(--surface-1);border:1px solid rgba(11,11,11,.10);border-radius:12px;padding:14px 16px}
+ .kpi .n{font-size:25px;font-weight:700} .kpi .l{font-size:12.5px;color:var(--text-secondary);margin-top:2px}
+ .grid-wrap{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+ .card{background:var(--surface-1);border:1px solid rgba(11,11,11,.10);border-radius:12px;padding:16px 18px}
+ .card.span2{grid-column:1/-1}
+ .card h2{font-size:15px;margin:0 0 2px} .card p.note{font-size:12.5px;color:var(--text-secondary);margin:0 0 10px}
+ .legend{display:flex;gap:16px;flex-wrap:wrap;font-size:12.5px;color:var(--text-secondary);margin:2px 0 8px}
+ .legend span{display:inline-flex;align-items:center;gap:6px} .sw{width:12px;height:12px;border-radius:3px}
+ .grid{stroke:var(--grid);stroke-width:1} .ref{stroke:var(--crit);stroke-width:1.4;stroke-dasharray:4 3}
+ .ytick,.xlab,.vlab{fill:var(--muted);font-family:system-ui} .ytick{font-size:9px}
+ .xlab{font-size:11px;fill:var(--text-secondary)} .vlab{font-size:10.5px;fill:var(--text-primary);font-weight:600}
+ .takeaway{margin-top:20px;background:var(--surface-1);border:1px solid rgba(11,11,11,.10);
+   border-left:4px solid var(--series-1);border-radius:10px;padding:14px 18px;font-size:14px}
+ footer{margin-top:16px;font-size:12px;color:var(--muted)} a{color:var(--series-1)}
+</style></head><body><div class='viz-root'>
+<a class='back' href='../index.html'>&larr; Back to portfolio</a>
+<h1>What's actually driving inflation? The headline hides the spread</h1>
+<p class='sub'>Canada's all-items CPI rose 2.8% year-over-year in June 2026. But "2.8%" is a weighted blend of components moving very differently — gasoline up 20.5%, shelter up just 1.5%. The single number tells you almost nothing about what a given household actually feels.</p>
+<div class='kpis'><div class='kpi'><div class='n' style='color:var(--series-1)'>2.8%</div><div class='l'>headline all-items inflation, June 2026 (year-over-year)</div></div><div class='kpi'><div class='n' style='color:var(--series-1)'>+20.5%</div><div class='l'>gasoline — 7× the headline</div></div><div class='kpi'><div class='n' style='color:var(--series-1)'>+1.5%</div><div class='l'>shelter — well below headline</div></div><div class='kpi'><div class='n' style='color:var(--series-1)'>weights</div><div class='l'>why a 20% jump barely moves 2.8%</div></div></div>
+<div class='grid-wrap'>
+  <div class='card span2'><h2>1 &nbsp;Component inflation vs. the 2.8% headline (June 2026, YoY)</h2>
+    <p class='note'>Year-over-year price change by component. The blue bar is the all-items headline; components spread far above and below it.</p>
+    <svg viewBox='0 0 640 220' width='100%' role='img'><text x='122' y='31.4' class='xlab' text-anchor='end'>Gasoline</text><rect x='130' y='15.3' width='434.2' height='26.1' rx='3' fill='var(--series-2)'><title>Gasoline: 20.5%</title></rect><text x='570.2' y='31.4' class='vlab' text-anchor='start'>20.5%</text><text x='122' y='72.2' class='xlab' text-anchor='end'>Transportation</text><rect x='130' y='56.1' width='141.9' height='26.1' rx='3' fill='var(--series-2)'><title>Transportation: 6.7%</title></rect><text x='277.9' y='72.2' class='vlab' text-anchor='start'>6.7%</text><text x='122' y='113.0' class='xlab' text-anchor='end'>Food from stores</text><rect x='130' y='96.9' width='82.6' height='26.1' rx='3' fill='var(--series-2)'><title>Food from stores: 3.9%</title></rect><text x='218.6' y='113.0' class='vlab' text-anchor='start'>3.9%</text><text x='122' y='153.8' class='xlab' text-anchor='end'>All-items (CPI)</text><rect x='130' y='137.7' width='59.3' height='26.1' rx='3' fill='var(--series-1)'><title>All-items (CPI): 2.8%</title></rect><text x='195.3' y='153.8' class='vlab' text-anchor='start'>2.8%</text><text x='122' y='194.6' class='xlab' text-anchor='end'>Shelter</text><rect x='130' y='178.5' width='31.8' height='26.1' rx='3' fill='var(--neutral)'><title>Shelter: 1.5%</title></rect><text x='167.8' y='194.6' class='vlab' text-anchor='start'>1.5%</text></svg></div>
+  <div class='card'><h2>2 &nbsp;Why the headline stays calm</h2>
+    <p class='note'>Gasoline is volatile but a small slice of the basket, so even a 20% swing moves the index only modestly — and it's already decelerating from May.</p>
+    <div class='legend'><span><i class='sw' style='background:var(--neutral)'></i>May 2026</span><span><i class='sw' style='background:var(--series-2)'></i>June 2026</span></div>
+    <svg viewBox='0 0 420 230' width='100%' role='img'><line x1='38' y1='200.0' x2='410' y2='200.0' class='grid'/><text x='34' y='203.0' class='ytick' text-anchor='end'>0</text><line x1='38' y1='153.5' x2='410' y2='153.5' class='grid'/><text x='34' y='156.5' class='ytick' text-anchor='end'>10</text><line x1='38' y1='107.0' x2='410' y2='107.0' class='grid'/><text x='34' y='110.0' class='ytick' text-anchor='end'>20</text><line x1='38' y1='60.5' x2='410' y2='60.5' class='grid'/><text x='34' y='63.5' class='ytick' text-anchor='end'>30</text><line x1='38' y1='14.0' x2='410' y2='14.0' class='grid'/><text x='34' y='17.0' class='ytick' text-anchor='end'>40</text><rect x='175.5' y='45.6' width='46.0' height='154.4' rx='3' fill='var(--neutral)'><title>Gasoline, YoY — May 2026: 33.2%</title></rect><text x='198.5' y='41.6' class='vlab' text-anchor='middle'>33.2%</text><rect x='226.5' y='104.7' width='46.0' height='95.3' rx='3' fill='var(--series-2)'><title>Gasoline, YoY — June 2026: 20.5%</title></rect><text x='249.5' y='100.7' class='vlab' text-anchor='middle'>20.5%</text><text x='224.0' y='221' class='xlab' text-anchor='middle'>Gasoline, YoY</text></svg></div>
+  <div class='card'><h2>3 &nbsp;The data-literacy point</h2>
+    <p class='note' style='font-size:13.5px;line-height:1.55'>A headline rate is an <strong>average weighted by spending shares</strong>. Households that drive a lot, or spend more on groceries, experience an inflation rate well above 2.8%. When you read "inflation is X%", ask: which basket, and whose?</p>
+  </div>
+</div>
+<div class='takeaway'><strong>Takeaway:</strong> One inflation number is a weighted average, not a universal experience. The spread across components — and each household's own basket — is where the real story lives. Always decompose the index before drawing conclusions.</div>
+<footer>Source: Statistics Canada, <a href='https://www150.statcan.gc.ca/n1/daily-quotidien/260720/dq260720a-eng.htm'>Consumer Price Index, June 2026</a> (The Daily).</footer>
+</div></body></html>
