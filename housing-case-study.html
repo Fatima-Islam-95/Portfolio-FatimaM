@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Case study — Who the housing squeeze really hits</title>
+<style>
+ :root{color-scheme:light dark}
+ .root{--surface:#fcfcfb;--page:#f9f9f7;--ink:#0b0b0b;--sec:#52514e;--muted:#898781;--line:rgba(11,11,11,.10);--accent:#2a78d6;--soft:#eaf1fb}
+ @media (prefers-color-scheme:dark){:root:where(:not([data-theme='light'])) .root{
+   --surface:#1a1a19;--page:#0d0d0d;--ink:#fff;--sec:#c3c2b7;--muted:#8f8d86;--line:rgba(255,255,255,.12);--accent:#3987e5;--soft:#152538}}
+ *{box-sizing:border-box} body{margin:0;background:var(--page);color:var(--ink);
+   font-family:system-ui,-apple-system,'Segoe UI',sans-serif;line-height:1.6}
+ .root{max-width:760px;margin:0 auto;padding:30px 24px 60px}
+ .back{font-size:13px;color:var(--accent);text-decoration:none}
+ .eyebrow{color:var(--accent);font-weight:600;font-size:13px;letter-spacing:.02em;margin-top:14px}
+ h1{font-size:27px;margin:6px 0 8px;letter-spacing:-.01em}
+ .meta{font-size:13px;color:var(--muted);margin-bottom:8px}
+ .lead{font-size:16px;color:var(--sec)}
+ h2{font-size:15px;margin:30px 0 6px;color:var(--accent)}
+ p{margin:0 0 12px;font-size:15px}
+ .callout{background:var(--surface);border:1px solid var(--line);border-left:4px solid var(--accent);
+   border-radius:10px;padding:14px 18px;margin:16px 0;font-size:14.5px}
+ ul{margin:0 0 12px;padding-left:20px} li{font-size:15px;margin-bottom:5px}
+ .btn{display:inline-block;margin-top:8px;padding:9px 16px;border-radius:9px;background:var(--accent);
+   color:#fff;text-decoration:none;font-size:14px;font-weight:600}
+ a{color:var(--accent)}
+ footer{margin-top:34px;padding-top:18px;border-top:1px solid var(--line);font-size:12.5px;color:var(--muted)}
+</style>
+</head>
+<body>
+<div class="root">
+<a class="back" href="index.html">&larr; Back to portfolio</a>
+<div class="eyebrow">CASE STUDY · HOUSING · EQUITY</div>
+<h1>Who the housing squeeze really hits</h1>
+<div class="meta">2021 Census · Statistics Canada · Tools: Python (pandas), Tableau, HTML/SVG</div>
+<p class="lead">"Housing is unaffordable for young people" is a familiar headline. I wanted to test whether the data
+says something more specific — and more useful for policy — than that.</p>
+
+<h2>The question</h2>
+<p>Affordability debates usually split the population into renters vs. owners, or young vs. old. But those cuts
+are blunt. If you were designing support for renters, <em>which</em> renters would you target first? I set out to
+find where cost burden actually concentrates, using a definition I could hold constant: Statistics Canada counts a
+household as being in "unaffordable housing" when it spends more than 30% of pre-tax income on shelter.</p>
+
+<h2>The approach</h2>
+<p>I worked from Statistics Canada's 2021 Census study <em>A tale of two renters</em>, which distinguishes
+<strong>recent renters</strong> (households that moved into their home within the past year) from
+<strong>existing renters</strong>. My steps:</p>
+<ul>
+  <li>Anchored on one consistent metric (the &gt;30% shelter-cost-to-income ratio) so every comparison was apples-to-apples.</li>
+  <li>Compared recent vs. existing renters overall, then <strong>segmented by age band</strong> to see whether the gap was uniform or concentrated.</li>
+  <li>Built a derived "entry penalty" — the percentage-point gap between recent and existing renters at each age — to isolate the effect of just having entered the market.</li>
+  <li>Visualized it as a three-step argument (headline → age breakdown → isolated penalty) so the conclusion is legible at a glance, and verified every figure against the source.</li>
+</ul>
+
+<h2>The finding</h2>
+<p>The squeeze isn't really "young renters" as a category — it's renters at the <strong>moment of entry</strong>,
+and that moment is hardest for the youngest.</p>
+<div class="callout">
+  43.2% of recent renters were cost-burdened vs. 30.5% of existing renters. Among renters aged
+  <strong>18–24</strong>, the split widens to <strong>45.0% vs. 23.0%</strong> — recent renters are cost-burdened
+  at nearly double the rate of established renters the same age. The "entry penalty" peaks at 22 percentage points
+  for 18–24 and narrows with age.
+</div>
+<p>The mechanism is intuitive once segmented: people signing their first leases pay today's market rents with the
+least savings to absorb them, while established tenants are partly shielded by slower increases on ongoing
+tenancies. The age pattern falls straight out of that.</p>
+
+<h2>Why it matters</h2>
+<p>The "so what" is a targeting insight. Support framed broadly around "renters" spreads thin and misses the
+sharpest pressure point; the data argues for help aimed at the <strong>transition into the market</strong> —
+first-lease and young-renter support — where the burden is most acute. It's also a reminder of the method that runs
+through my work: an aggregate ("renters are cost-burdened") can hide the segment that actually needs the
+intervention. Segment before you conclude.</p>
+
+<a class="btn" href="housing-young-renters.html">Open the interactive dashboard →</a>
+
+<footer>Source: Statistics Canada, <a href="https://www12.statcan.gc.ca/census-recensement/2021/as-sa/98-200-X/2021016/98-200-X2021016-eng.cfm">A tale of two renters: Housing affordability among recent and existing renters in Canada</a>, 2021 Census (Cat. 98-200-X2021016).</footer>
+</div>
+</body>
+</html>
