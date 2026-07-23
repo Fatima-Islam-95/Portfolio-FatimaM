@@ -1,82 +1,64 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-<meta charset="utf-8"/>
-<meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>Case study — Who the housing squeeze really hits</title>
+<!DOCTYPE html><html lang='en'><head><meta charset='utf-8'/>
+<meta name='viewport' content='width=device-width, initial-scale=1'/>
+<title>Young renters &amp; cost burden — 2021 Census</title>
 <style>
  :root{color-scheme:light dark}
- .root{--surface:#fcfcfb;--page:#f9f9f7;--ink:#0b0b0b;--sec:#52514e;--muted:#898781;--line:rgba(11,11,11,.10);--accent:#2a78d6;--soft:#eaf1fb}
- @media (prefers-color-scheme:dark){:root:where(:not([data-theme='light'])) .root{
-   --surface:#1a1a19;--page:#0d0d0d;--ink:#fff;--sec:#c3c2b7;--muted:#8f8d86;--line:rgba(255,255,255,.12);--accent:#3987e5;--soft:#152538}}
- *{box-sizing:border-box} body{margin:0;background:var(--page);color:var(--ink);
-   font-family:system-ui,-apple-system,'Segoe UI',sans-serif;line-height:1.6}
- .root{max-width:760px;margin:0 auto;padding:30px 24px 60px}
- .back{font-size:13px;color:var(--accent);text-decoration:none}
- .eyebrow{color:var(--accent);font-weight:600;font-size:13px;letter-spacing:.02em;margin-top:14px}
- h1{font-size:27px;margin:6px 0 8px;letter-spacing:-.01em}
- .meta{font-size:13px;color:var(--muted);margin-bottom:8px}
- .lead{font-size:16px;color:var(--sec)}
- h2{font-size:15px;margin:30px 0 6px;color:var(--accent)}
- p{margin:0 0 12px;font-size:15px}
- .callout{background:var(--surface);border:1px solid var(--line);border-left:4px solid var(--accent);
-   border-radius:10px;padding:14px 18px;margin:16px 0;font-size:14.5px}
- ul{margin:0 0 12px;padding-left:20px} li{font-size:15px;margin-bottom:5px}
- .btn{display:inline-block;margin-top:8px;padding:9px 16px;border-radius:9px;background:var(--accent);
-   color:#fff;text-decoration:none;font-size:14px;font-weight:600}
- a{color:var(--accent)}
- footer{margin-top:34px;padding-top:18px;border-top:1px solid var(--line);font-size:12.5px;color:var(--muted)}
-</style>
-</head>
-<body>
-<div class="root">
-<a class="back" href="../index.html">&larr; Back to portfolio</a>
-<div class="eyebrow">CASE STUDY · HOUSING · EQUITY</div>
-<h1>Who the housing squeeze really hits</h1>
-<div class="meta">2021 Census · Statistics Canada · Tools: Python (pandas), Tableau, HTML/SVG</div>
-<p class="lead">"Housing is unaffordable for young people" is a familiar headline. I wanted to test whether the data
-says something more specific — and more useful for policy — than that.</p>
+ .viz-root{--surface-1:#fcfcfb;--page:#f9f9f7;--text-primary:#0b0b0b;--text-secondary:#52514e;
+   --muted:#898781;--grid:#e1e0d9;--series-1:#2a78d6;--series-2:#898781;--crit:#d03b3b}
+ @media (prefers-color-scheme:dark){:root:where(:not([data-theme='light'])) .viz-root{
+   --surface-1:#1a1a19;--page:#0d0d0d;--text-primary:#fff;--text-secondary:#c3c2b7;
+   --muted:#898781;--grid:#2c2c2a;--series-1:#3987e5;--series-2:#a5a39a;--crit:#e66767}}
+ *{box-sizing:border-box} body{margin:0;background:var(--page);color:var(--text-primary);
+   font-family:system-ui,-apple-system,'Segoe UI',sans-serif;line-height:1.5}
+ .viz-root{max-width:1180px;margin:0 auto;padding:28px 22px 44px}
+ h1{font-size:22px;margin:0 0 4px} p.sub{margin:0;color:var(--text-secondary);font-size:14px;max-width:82ch}
+ .kpis{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;margin:22px 0}
+ .kpi{background:var(--surface-1);border:1px solid rgba(11,11,11,.10);border-radius:12px;padding:14px 16px}
+ .kpi .n{font-size:26px;font-weight:700} .kpi .l{font-size:12.5px;color:var(--text-secondary);margin-top:2px}
+ .grid-wrap{display:grid;grid-template-columns:40fr 60fr;gap:16px}
+ .card{background:var(--surface-1);border:1px solid rgba(11,11,11,.10);border-radius:12px;padding:16px 18px}
+ .card.span2{grid-column:1/-1;margin-top:16px}
+ .card h2{font-size:15px;margin:0 0 2px} .card p.note{font-size:12.5px;color:var(--text-secondary);margin:0 0 10px}
+ .legend{display:flex;gap:16px;font-size:12.5px;color:var(--text-secondary);margin:2px 0 8px}
+ .legend span{display:inline-flex;align-items:center;gap:6px} .sw{width:12px;height:12px;border-radius:3px}
+ .grid{stroke:var(--grid);stroke-width:1}
+ .ytick,.xlab,.vlab{fill:var(--muted);font-family:system-ui} .ytick{font-size:9px}
+ .xlab{font-size:11px;fill:var(--text-secondary)} .vlab{font-size:10.5px;fill:var(--text-primary);font-weight:600}
+ .takeaway{margin-top:20px;background:var(--surface-1);border:1px solid rgba(11,11,11,.10);
+   border-left:4px solid var(--series-1);border-radius:10px;padding:14px 18px;font-size:14px}
+ footer{margin-top:16px;font-size:12px;color:var(--muted)} a{color:var(--series-1)}
+</style></head><body><div class='viz-root'>
+<h1>The proof: young renters face far higher cost burdens</h1>
+<p class='sub'>"Unaffordable" = a household spends more than 30% of pre-tax income on shelter. In the 2021 Census, households that had <strong>recently</strong> moved into a rental were far more likely to be cost-burdened than established renters — and the gap is widest for the youngest adults.</p>
 
-<h2>The question</h2>
-<p>Affordability debates usually split the population into renters vs. owners, or young vs. old. But those cuts
-are blunt. If you were designing support for renters, <em>which</em> renters would you target first? I set out to
-find where cost burden actually concentrates, using a definition I could hold constant: Statistics Canada counts a
-household as being in "unaffordable housing" when it spends more than 30% of pre-tax income on shelter.</p>
-
-<h2>The approach</h2>
-<p>I worked from Statistics Canada's 2021 Census study <em>A tale of two renters</em>, which distinguishes
-<strong>recent renters</strong> (households that moved into their home within the past year) from
-<strong>existing renters</strong>. My steps:</p>
-<ul>
-  <li>Anchored on one consistent metric (the &gt;30% shelter-cost-to-income ratio) so every comparison was apples-to-apples.</li>
-  <li>Compared recent vs. existing renters overall, then <strong>segmented by age band</strong> to see whether the gap was uniform or concentrated.</li>
-  <li>Built a derived "entry penalty" — the percentage-point gap between recent and existing renters at each age — to isolate the effect of just having entered the market.</li>
-  <li>Visualized it as a three-step argument (headline → age breakdown → isolated penalty) so the conclusion is legible at a glance, and verified every figure against the source.</li>
-</ul>
-
-<h2>The finding</h2>
-<p>The squeeze isn't really "young renters" as a category — it's renters at the <strong>moment of entry</strong>,
-and that moment is hardest for the youngest.</p>
-<div class="callout">
-  43.2% of recent renters were cost-burdened vs. 30.5% of existing renters. Among renters aged
-  <strong>18–24</strong>, the split widens to <strong>45.0% vs. 23.0%</strong> — recent renters are cost-burdened
-  at nearly double the rate of established renters the same age. The "entry penalty" peaks at 22 percentage points
-  for 18–24 and narrows with age.
+<div class='kpis'>
+  <div class='kpi'><div class='n' style='color:var(--series-1)'>43.2%</div><div class='l'>of recent renters are cost-burdened (vs 30.5% of existing)</div></div>
+  <div class='kpi'><div class='n' style='color:var(--series-1)'>45.0%</div><div class='l'>of recent renters aged 18–24 — the highest of any age</div></div>
+  <div class='kpi'><div class='n' style='color:var(--crit)'>~2×</div><div class='l'>18–24 recent renters vs. existing renters (45.0% vs 23.0%)</div></div>
+  <div class='kpi'><div class='n'>30%</div><div class='l'>of income on shelter = StatCan's affordability threshold</div></div>
 </div>
-<p>The mechanism is intuitive once segmented: people signing their first leases pay today's market rents with the
-least savings to absorb them, while established tenants are partly shielded by slower increases on ongoing
-tenancies. The age pattern falls straight out of that.</p>
 
-<h2>Why it matters</h2>
-<p>The "so what" is a targeting insight. Support framed broadly around "renters" spreads thin and misses the
-sharpest pressure point; the data argues for help aimed at the <strong>transition into the market</strong> —
-first-lease and young-renter support — where the burden is most acute. It's also a reminder of the method that runs
-through my work: an aggregate ("renters are cost-burdened") can hide the segment that actually needs the
-intervention. Segment before you conclude.</p>
-
-<a class="btn" href="../dashboards/housing-young-renters.html">Open the interactive dashboard →</a>
-
-<footer>Source: Statistics Canada, <a href="https://www12.statcan.gc.ca/census-recensement/2021/as-sa/98-200-X/2021016/98-200-X2021016-eng.cfm">A tale of two renters: Housing affordability among recent and existing renters in Canada</a>, 2021 Census (Cat. 98-200-X2021016).</footer>
+<div class='grid-wrap'>
+  <div class='card'>
+    <h2>1 &nbsp;Recent vs. existing renters</h2>
+    <p class='note'>All renter households, % in unaffordable housing.</p>
+    <div class='legend'><span><i class='sw' style='background:var(--series-1)'></i>Recent renters</span><span><i class='sw' style='background:var(--series-2)'></i>Existing renters</span></div>
+    <svg viewBox='0 0 270 240' width='100%' role='img'><line x1='34' y1='210.0' x2='260' y2='210.0' class='grid'/><text x='30' y='213.0' class='ytick' text-anchor='end'>0</text><line x1='34' y1='170.4' x2='260' y2='170.4' class='grid'/><text x='30' y='173.4' class='ytick' text-anchor='end'>10</text><line x1='34' y1='130.8' x2='260' y2='130.8' class='grid'/><text x='30' y='133.8' class='ytick' text-anchor='end'>20</text><line x1='34' y1='91.2' x2='260' y2='91.2' class='grid'/><text x='30' y='94.2' class='ytick' text-anchor='end'>30</text><line x1='34' y1='51.6' x2='260' y2='51.6' class='grid'/><text x='30' y='54.6' class='ytick' text-anchor='end'>40</text><line x1='34' y1='12.0' x2='260' y2='12.0' class='grid'/><text x='30' y='15.0' class='ytick' text-anchor='end'>50</text><rect x='98.5' y='38.9' width='46.0' height='171.1' rx='3' fill='var(--series-1)'><title>All renters — Recent: 43.2%</title></rect><text x='121.5' y='34.9' class='vlab' text-anchor='middle'>43.2%</text><rect x='149.5' y='89.2' width='46.0' height='120.8' rx='3' fill='var(--series-2)'><title>All renters — Existing: 30.5%</title></rect><text x='172.5' y='85.2' class='vlab' text-anchor='middle'>30.5%</text><text x='147.0' y='230' class='xlab' text-anchor='middle'>All renters</text></svg>
+  </div>
+  <div class='card'>
+    <h2>2 &nbsp;Cost burden by age — the proof</h2>
+    <p class='note'>% in unaffordable housing, recent vs. existing renters, by age group.</p>
+    <div class='legend'><span><i class='sw' style='background:var(--series-1)'></i>Recent renters</span><span><i class='sw' style='background:var(--series-2)'></i>Existing renters</span></div>
+    <svg viewBox='0 0 560 260' width='100%' role='img'><line x1='34' y1='230.0' x2='550' y2='230.0' class='grid'/><text x='30' y='233.0' class='ytick' text-anchor='end'>0</text><line x1='34' y1='186.4' x2='550' y2='186.4' class='grid'/><text x='30' y='189.4' class='ytick' text-anchor='end'>10</text><line x1='34' y1='142.8' x2='550' y2='142.8' class='grid'/><text x='30' y='145.8' class='ytick' text-anchor='end'>20</text><line x1='34' y1='99.2' x2='550' y2='99.2' class='grid'/><text x='30' y='102.2' class='ytick' text-anchor='end'>30</text><line x1='34' y1='55.6' x2='550' y2='55.6' class='grid'/><text x='30' y='58.6' class='ytick' text-anchor='end'>40</text><line x1='34' y1='12.0' x2='550' y2='12.0' class='grid'/><text x='30' y='15.0' class='ytick' text-anchor='end'>50</text><rect x='71.5' y='58.2' width='46.0' height='171.8' rx='3' fill='var(--series-1)'><title>Age 0–17 — Recent: 39.4%</title></rect><text x='94.5' y='54.2' class='vlab' text-anchor='middle'>39.4%</text><rect x='122.5' y='135.8' width='46.0' height='94.2' rx='3' fill='var(--series-2)'><title>Age 0–17 — Existing: 21.6%</title></rect><text x='145.5' y='131.8' class='vlab' text-anchor='middle'>21.6%</text><text x='120.0' y='250' class='xlab' text-anchor='middle'>Age 0–17</text><rect x='243.5' y='33.8' width='46.0' height='196.2' rx='3' fill='var(--series-1)'><title>Age 18–24 — Recent: 45.0%</title></rect><text x='266.5' y='29.8' class='vlab' text-anchor='middle'>45.0%</text><rect x='294.5' y='129.7' width='46.0' height='100.3' rx='3' fill='var(--series-2)'><title>Age 18–24 — Existing: 23.0%</title></rect><text x='317.5' y='125.7' class='vlab' text-anchor='middle'>23.0%</text><text x='292.0' y='250' class='xlab' text-anchor='middle'>Age 18–24</text><rect x='415.5' y='80.5' width='46.0' height='149.5' rx='3' fill='var(--series-1)'><title>Age 25–29 — Recent: 34.3%</title></rect><text x='438.5' y='76.5' class='vlab' text-anchor='middle'>34.3%</text><rect x='466.5' y='146.3' width='46.0' height='83.7' rx='3' fill='var(--series-2)'><title>Age 25–29 — Existing: 19.2%</title></rect><text x='489.5' y='142.3' class='vlab' text-anchor='middle'>19.2%</text><text x='464.0' y='250' class='xlab' text-anchor='middle'>Age 25–29</text></svg>
+  </div>
+  <div class='card span2'>
+    <h2>3 &nbsp;The "entry penalty" — extra cost-burden from being a recent renter</h2>
+    <p class='note'>Recent-renter rate minus existing-renter rate, in percentage points. Largest for ages 18–24.</p>
+    <svg viewBox='0 0 700 220' width='100%' role='img'><line x1='34' y1='190.0' x2='690' y2='190.0' class='grid'/><text x='30' y='193.0' class='ytick' text-anchor='end'>0</text><line x1='34' y1='154.4' x2='690' y2='154.4' class='grid'/><text x='30' y='157.4' class='ytick' text-anchor='end'>5</text><line x1='34' y1='118.8' x2='690' y2='118.8' class='grid'/><text x='30' y='121.8' class='ytick' text-anchor='end'>10</text><line x1='34' y1='83.2' x2='690' y2='83.2' class='grid'/><text x='30' y='86.2' class='ytick' text-anchor='end'>15</text><line x1='34' y1='47.6' x2='690' y2='47.6' class='grid'/><text x='30' y='50.6' class='ytick' text-anchor='end'>20</text><line x1='34' y1='12.0' x2='690' y2='12.0' class='grid'/><text x='30' y='15.0' class='ytick' text-anchor='end'>25</text><rect x='120.3' y='63.3' width='46.0' height='126.7' rx='3' fill='var(--series-1)'><title>Age 0–17 — gap: 17.8%</title></rect><text x='143.3' y='59.3' class='vlab' text-anchor='middle'>17.8%</text><text x='143.3' y='210' class='xlab' text-anchor='middle'>Age 0–17</text><rect x='339.0' y='33.4' width='46.0' height='156.6' rx='3' fill='var(--series-1)'><title>Age 18–24 — gap: 22.0%</title></rect><text x='362.0' y='29.4' class='vlab' text-anchor='middle'>22.0%</text><text x='362.0' y='210' class='xlab' text-anchor='middle'>Age 18–24</text><rect x='557.7' y='82.5' width='46.0' height='107.5' rx='3' fill='var(--series-1)'><title>Age 25–29 — gap: 15.1%</title></rect><text x='580.7' y='78.5' class='vlab' text-anchor='middle'>15.1%</text><text x='580.7' y='210' class='xlab' text-anchor='middle'>Age 25–29</text></svg>
+  </div>
 </div>
-</body>
-</html>
+
+<div class='takeaway'><strong>Takeaway:</strong> The affordability squeeze concentrates at the moment of entry. Young people signing their first leases pay today's market rents with the least savings to absorb them — 18–24 recent renters are cost-burdened at nearly <strong>double</strong> the rate of established renters their age. Policy aimed at "renters" broadly can miss this: the sharpest pressure point is the transition <em>into</em> the market.</div>
+
+<footer>Source: Statistics Canada, <a href='https://www12.statcan.gc.ca/census-recensement/2021/as-sa/98-200-X/2021016/98-200-X2021016-eng.cfm'>A tale of two renters: Housing affordability among recent and existing renters in Canada</a>, 2021 Census, Cat. 98-200-X2021016. Static preview of the Tableau dashboard (see the .twbx).</footer>
+</div></body></html>
